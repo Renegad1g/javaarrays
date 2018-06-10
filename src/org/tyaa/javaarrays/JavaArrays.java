@@ -5,7 +5,7 @@
  */
 package org.tyaa.javaarrays;
 
-import java.lang.reflect.Array;
+import java.util.Arrays;
 
 /**
  *
@@ -37,7 +37,7 @@ public class JavaArrays {
             System.out.println("The end");
         }*/
         
-        int[] intArray = {1, 4, -7, 0, 1};
+        /*int[] intArray = {1, 4, -7, 0, 1};
         int[] intArray2 = new int[10];
         
         int[][] intArray3 = new int[10][10];
@@ -53,7 +53,27 @@ public class JavaArrays {
             for (int i : is) {
                 System.out.println(i);
             }
+        }*/
+        
+        //создание массива
+        int[][] Array = new int[11][11];
+        //формирование таблицы умножения
+        for (int i = 0; i < 11; i++) {
+            for (int j = 0; j < 11; j++) {
+                if(i == 0) {
+                    Array[i][j] = j; 
+                } else if(j == 0) {
+                    Array[i][j] = i; 
+                } else {
+                    Array[i][j] = i*j; 
+                }
+            }
         }
+        //вывод таблицы умножения
+        for (int[] i : Array) {
+            System.out.println(Arrays.toString(i));
+        }
+        
     }
     
 }

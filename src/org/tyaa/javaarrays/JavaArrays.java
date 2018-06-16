@@ -56,24 +56,32 @@ public class JavaArrays {
         }*/
         
         //создание массива
-        int[][] Array = new int[11][11];
+        int[][] array = new int[11][11];
         //формирование таблицы умножения
         for (int i = 0; i < 11; i++) {
             for (int j = 0; j < 11; j++) {
                 if(i == 0) {
-                    Array[i][j] = j; 
+                    array[i][j] = j; 
                 } else if(j == 0) {
-                    Array[i][j] = i; 
+                    array[i][j] = i; 
                 } else {
-                    Array[i][j] = i*j; 
+                    array[i][j] = i*j; 
                 }
             }
         }
         //вывод таблицы умножения
-        for (int[] i : Array) {
+        /*for (int[] i : array) {
             System.out.println(Arrays.toString(i));
-        }
+        }*/
         
+        for (int[] row : array) {
+            
+            for (int item : row) {
+                
+                System.out.printf("%4d", item);
+            }
+            System.out.println();
+        }
     }
     
 }
